@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker - Jahe Organik Kelor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-cream: #f9f6ef;
+            --primary-gold: #8d734a;
+            --accent-red: #d32f2f;
+            --text-dark: #2d2d2d;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+        }
+
+        .container { max-width: 600px; margin: 0 auto; background: white; min-height: 100vh; overflow: hidden; }
+
+        /* HERO SECTION */
+        .hero { text-align: center; padding: 40px 20px; background: linear-gradient(180deg, #fdfbf7 0%, #f9f6ef 100%); }
+        .hero h1 { font-weight: 800; font-size: 28px; margin: 0; color: #4a3c28; line-height: 1.2; }
+        .hero p { font-size: 18px; margin: 10px 0; color: #666; }
+        .product-main { width: 100%; max-width: 400px; margin: 20px 0; }
+
+        /* FEATURES SECTION */
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding: 20px; background: #fffdf5; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .feature-item { text-align: center; font-size: 11px; font-weight: 600; }
+        .feature-item img { width: 35px; display: block; margin: 0 auto 5px; }
+
+        /* SOCIAL PROOF */
+        .section-title { text-align: center; font-weight: 800; margin: 30px 0 15px; font-size: 22px; }
+        .proof-slider { display: flex; overflow-x: auto; gap: 15px; padding: 0 20px 20px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+        .proof-card { flex: 0 0 75%; background: white; border: 1px solid #eee; padding: 15px; border-radius: 12px; scroll-snap-align: center; box-shadow: var(--shadow); }
+        .user-info { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .user-info img { width: 40px; border-radius: 50%; }
+        .stars { color: #ffc107; font-size: 12px; }
+        .logos { display: flex; justify-content: center; align-items: center; gap: 20px; padding: 0 20px 30px; opacity: 0.7; }
+        .logos img { height: 20px; }
+
+        /* CALL TO ACTION BOX */
+        .cta-box { margin: 20px; padding: 25px; border-radius: 20px; background: linear-gradient(135deg, #a01a1a 0%, #d32f2f 100%); color: white; text-align: center; position: relative; }
+        .badge-save { position: absolute; top: -15px; right: 10px; background: #7ba23f; padding: 8px 12px; border-radius: 10px; font-weight: 800; font-size: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .cta-box h2 { margin: 0; font-size: 22px; text-transform: uppercase; line-height: 1.2; }
+        .cta-box .price { font-size: 36px; font-weight: 800; display: block; margin: 10px 0; }
+        
+        .order-btn { display: block; background: #ff4d00; color: white; text-decoration: none; padding: 18px; border-radius: 12px; font-weight: 800; font-size: 18px; margin: 20px 0 10px; text-align: center; box-shadow: 0 6px 0 #b33600; transition: 0.2s; }
+        .order-btn:active { transform: translateY(3px); box-shadow: 0 3px 0 #b33600; }
+
+        /* PAYMENT OPTIONS */
+        .payments { background: #f8f9fa; border-radius: 12px; padding: 15px; margin-top: 15px; border: 1px solid #ddd; }
+        .payment-tags { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .tag { background: white; border: 1px solid #ccc; padding: 5px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+
+        /* FAQ */
+        .faq { padding: 20px; }
+        details { background: #fff; border: 1px solid #eee; margin-bottom: 10px; border-radius: 8px; }
+        summary { padding: 15px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-content { padding: 0 15px 15px; font-size: 14px; color: #555; border-top: 1px solid #f9f9f9; }
+
+        /* FLOATING WHATSAPP */
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #8d734a; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 999; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section class="hero">
+        <h1>Jahe Organik Kelor<br>untuk STAMINA!</h1>
+        <p>Energi Alami Tanpa Ribet</p>
+        <img src="codejoker/joker.jpg" alt="Joker Jahe" class="product-main">
+    </section>
+
+    <div class="feature-grid">
+        <div class="feature-item">
+            <strong>Meningkatkan<br>Stamina Anda</strong>
+        </div>
+        <div class="feature-item">
+            <strong>Tambah Energi<br>Harian</strong>
+        </div>
+        <div class="feature-item">
+            <strong>Hangatkan &<br>Tenangkan Badan</strong>
+        </div>
+    </div>
+
+    <h3 class="section-title">Social Proof</h3>
+    <div class="proof-slider">
+        <div class="proof-card">
+            <div class="user-info">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <strong>Pak Budi:</strong>
+            </div>
+            "Badan jadi segar kembali setelah minum rutin!"
+        </div>
+        <div class="proof-card">
+            <div class="user-info">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <strong>Pak Ali:</strong>
+            </div>
+            "Produk alami yang sangat membantu stamina saya."
+        </div>
+    </div>
+    <div class="logos">
+        <small>Mauk di Media:</small>
+        <strong>BAZAAR</strong>
+        <strong>kumparan</strong>
+    </div>
+
+    <h3 class="section-title">Call to Action</h3>
+    <div class="cta-box">
+        <div class="badge-save">Hemat 250 Ribu!</div>
+        <h2>BELI 5 GRATIS 1<br>+ FREE ONGKIR</h2>
+        <span class="price">Rp. 250.000</span>
+        <small>*Untuk Semua Wilayah</small>
+
+        <a href="https://wa.me/628123456789?text=Halo%20Admin,%20saya%20mau%20PROMO%20JOKER" class="order-btn">Dapatkan PROMO Spesial SEKARANG</a>
+
+        <div class="payments">
+            <small style="color: #666;">Pilihan pembayaran mudah:</small>
+            <div class="payment-tags">
+                <div class="tag">Bayar di Tempat (COD)</div>
+                <div class="tag">Transfer Bank</div>
+                <div class="tag">GoPay/OVO</div>
+            </div>
+            <p style="margin: 15px 0 0; font-size: 13px; font-weight: bold; color: #333;">Jaminan Kepuasan 100% 💵</p>
+        </div>
+    </div>
+
+    <section class="faq">
+        <h3 class="section-title" style="margin-top: 10px;">Tanya Jawab (FAQ)</h3>
+        <details>
+            <summary>Apakah ini bubuk atau daun?</summary>
+            <div class="faq-content">Produk ini berbentuk bubuk halus. Cukup seduh dengan air hangat dan siap diminum.</div>
+        </details>
+        <details>
+            <summary>Sehari minum berapa kali?</summary>
+            <div class="faq-content">Disarankan 1-2 kali sehari setelah makan untuk hasil maksimal.</div>
+        </details>
+        <details>
+            <summary>Apakah aman untuk lambung?</summary>
+            <div class="faq-content">Aman, karena terbuat dari bahan jahe organik dan kelor pilihan tanpa pengawet kimia.</div>
+        </details>
+    </section>
+
+    <div style="height: 100px;"></div>
+</div>
+
+<a href="https://wa.me/628123456789" class="wa-float">
+    Hubungi Kami (WhatsApp)
+</a>
+
+</body>
+</html>
